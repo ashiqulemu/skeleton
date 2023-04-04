@@ -34,19 +34,29 @@ body {
   padding: 15px;
   gap: 15px;
 }
-.card-sceleton .photo {
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5490196078);
-  position: relative;
-  display: flex;
-  overflow: hidden;
-}
 .card-sceleton .content {
   flex: 2;
 }
-.card-sceleton .content p {
+.card-sceleton .content .heading {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.card-sceleton .content .heading p {
+  background-color: #bdbdbd;
+  border-radius: 3px;
+  margin-bottom: 7px;
+  padding: 10px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+.card-sceleton .content .data {
+  display: flex;
+  gap: 15px;
+}
+.card-sceleton .content .data p {
   background-color: lightgray;
   border-radius: 10px;
   margin-bottom: 7px;
@@ -54,6 +64,7 @@ body {
   display: flex;
   position: relative;
   overflow: hidden;
+  flex: 1;
 }
 
 .shimmer::after {
@@ -61,13 +72,13 @@ body {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to right, rgba(251, 251, 251, 0.33), white 29%, rgba(255, 255, 255, 0.41));
-  animation: shimmer 1.9s linear infinite;
+  animation: shimmer 3s linear infinite;
   position: absolute;
 }
 
 @keyframes shimmer {
   0% {
-    background-position: -350px -120px;
+    background-position: -550px -120px;
   }
   100% {
     background-position: 0;

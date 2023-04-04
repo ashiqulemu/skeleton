@@ -37,20 +37,39 @@ body {
     border-radius: 10px;
     padding: 15px;
     gap: 15px;
-    .photo{
-        height: 90px;
-        width: 90px;
-        border-radius: 50%;
-        background: #ffffff8c; 
-        position: relative;
-        display: flex;
-        overflow: hidden;
+    // .photo{
+    //     height: 90px;
+    //     width: 90px;
+    //     border-radius: 50%;
+    //     background: #ffffff8c; 
+    //     position: relative;
+    //     display: flex;
+    //     overflow: hidden;
       
-    }
+    // }
      
     .content{
         flex:2;
-        p{
+        .heading{
+            display: flex; 
+            gap: 15px;
+            margin-bottom: 10px;
+            p{
+            background-color: #bdbdbd;
+            border-radius: 3px;
+            margin-bottom: 7px;
+            padding: 10px;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            flex: 1;
+           
+            }
+        }
+        .data{
+            display: flex; 
+            gap: 15px;
+            p{
             background-color: lightgray;
             border-radius: 10px;
             margin-bottom: 7px;
@@ -58,7 +77,10 @@ body {
             display: flex;
             position: relative;
             overflow: hidden;
+            flex: 1;
+            }
         }
+       
     }
 }
 
@@ -74,7 +96,7 @@ body {
     //     rgb(255, 255, 255)30% , 
     //     rgb(239 239 239)10%);
 
-        animation: shimmer 1.9s linear infinite ; 
+        animation: shimmer 3s linear infinite ; 
         position: absolute;
     }
   }
@@ -82,7 +104,7 @@ body {
 
 @keyframes shimmer {
     0%{
-        background-position:-350px -120px;
+        background-position:-550px -120px;
     }
     100%{
       background-position: 0;
