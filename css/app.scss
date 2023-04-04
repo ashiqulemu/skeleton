@@ -1,0 +1,90 @@
+// variables
+
+
+
+:root{
+    --primary: #C20032  ;
+    --secondary: #ffffff  ;
+} 
+ .dark-mode{
+    --primary: #f7f7f7  ;
+    --secondary: #070707 ;
+ }
+
+.simple-content{
+    background-color:var(--secondary);
+    h4{
+        color: var(--primary);
+    }
+    p{
+        color:var(--primary);
+    }
+}
+ 
+ 
+body {
+    overflow-x: hidden;
+    font-family: 'poppins-light';
+    background:var(--secondary)!important; 
+    color:var(--secondary)!important; 
+}
+
+.card-sceleton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e1e1e1;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 15px;
+    .photo{
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        background: #ffffff8c; 
+        position: relative;
+        display: flex;
+        overflow: hidden;
+      
+    }
+     
+    .content{
+        flex:2;
+        p{
+            background-color: lightgray;
+            border-radius: 10px;
+            margin-bottom: 7px;
+            height: 14px;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}
+
+.shimmer{
+    &::after{
+        content:'';
+        height: 100%;
+        width: 100%;  
+        background-image:linear-gradient(to right, rgba(251, 251, 251, 0.33), white 29%, rgba(255, 255, 255, 0.41));
+
+    //    background: linear-gradient(90deg,
+    //     rgb(239 239 239) 20%,
+    //     rgb(255, 255, 255)30% , 
+    //     rgb(239 239 239)10%);
+
+        animation: shimmer 1.9s linear infinite ; 
+        position: absolute;
+    }
+  }
+
+
+@keyframes shimmer {
+    0%{
+        background-position:-350px -120px;
+    }
+    100%{
+      background-position: 0;
+    }
+  }

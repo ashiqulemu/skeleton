@@ -1,0 +1,75 @@
+:root {
+  --primary: #C20032 ;
+  --secondary: #ffffff ;
+}
+
+.dark-mode {
+  --primary: #f7f7f7 ;
+  --secondary: #070707 ;
+}
+
+.simple-content {
+  background-color: var(--secondary);
+}
+.simple-content h4 {
+  color: var(--primary);
+}
+.simple-content p {
+  color: var(--primary);
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "poppins-light";
+  background: var(--secondary) !important;
+  color: var(--secondary) !important;
+}
+
+.card-sceleton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1e1e1;
+  border-radius: 10px;
+  padding: 15px;
+  gap: 15px;
+}
+.card-sceleton .photo {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5490196078);
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.card-sceleton .content {
+  flex: 2;
+}
+.card-sceleton .content p {
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-bottom: 7px;
+  height: 14px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(251, 251, 251, 0.33), white 29%, rgba(255, 255, 255, 0.41));
+  animation: shimmer 1.9s linear infinite;
+  position: absolute;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -350px -120px;
+  }
+  100% {
+    background-position: 0;
+  }
+}/*# sourceMappingURL=app.css.map */
